@@ -77,7 +77,7 @@
 						<li>Links</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -201,7 +201,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/31/react/">demo</a>
+      <a class="article-title" href="/2016/05/31/react/">React读书笔记</a>
     </h1>
   
 
@@ -210,8 +210,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="React读书笔记"><a href="#React读书笔记" class="headerlink" title="React读书笔记"></a>React读书笔记</h1><p>标签（空格分隔）： React es6</p>
-<hr>
+        <hr>
 <p>最近前端圈的技术层出不穷，各种框架、工具不断涌现。为了跟上时代的步伐，我买了本React的书，边看边记录，照着书中的例子改写成ES6版，希望自己能变得更强。</p>
 <h2 id="约束组件"><a href="#约束组件" class="headerlink" title="约束组件"></a>约束组件</h2><p>约束组件的模式与React其他类型组件的模式一致，表单组件的状态交由React组件控制，状态值被存储在React的state中。<br>示例如下：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyForm</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">        <span class="keyword">super</span>(props);</span><br><span class="line">        <span class="keyword">this</span>.state = &#123;</span><br><span class="line">            helloTo:<span class="string">"Hello World!"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    handleChange(event) &#123;</span><br><span class="line">        event.preventDefault();</span><br><span class="line">        <span class="keyword">this</span>.setState(&#123;helloTo:event.target.value&#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    submitHandler(event) &#123;</span><br><span class="line">        event.preventDefault();</span><br><span class="line">        alert(<span class="keyword">this</span>.state.helloTo);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            &lt;form&gt;</span><br><span class="line">                &lt;input type="text" value=&#123;this.state.helloTo&#125;</span><br><span class="line">                onChange=&#123;this.handleChange&#125; /&gt;</span><br><span class="line">                &lt;button type="submit"&gt;Speak&lt;/button&gt;</span><br><span class="line">            &lt;/form&gt;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
