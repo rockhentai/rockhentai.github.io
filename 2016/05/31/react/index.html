@@ -16,7 +16,7 @@
 <meta property="og:description" content="最近前端圈的技术层出不穷，各种框架、工具不断涌现。为了跟上时代的步伐，我买了本React的书，边看边记录，照着书中的例子改写成ES6版，希望自己能变得更强。
 约束组件约束组件的模式与React其他类型组件的模式一致，表单组件的状态交由React组件控制，状态值被存储在React的state中。示例如下：
 1234567891011121314151617181920212223242526272">
-<meta property="og:updated_time" content="2016-06-01T14:24:39.988Z">
+<meta property="og:updated_time" content="2016-06-01T14:35:12.112Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React读书笔记">
 <meta name="twitter:description" content="最近前端圈的技术层出不穷，各种框架、工具不断涌现。为了跟上时代的步伐，我买了本React的书，边看边记录，照着书中的例子改写成ES6版，希望自己能变得更强。
@@ -236,6 +236,7 @@
 <li>在重新渲染时更新input的值</li>
 </ul>
 </blockquote>
+<p>示例：当用户输入的时候，把字符都转成大写<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">handleChange(event) &#123;</span><br><span class="line">  this.setState(&#123;</span><br><span class="line">      helloTo:event.target.value.toUpperCase();</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
