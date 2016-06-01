@@ -16,7 +16,7 @@
 <meta property="og:description" content="最近前端圈的技术层出不穷，各种框架、工具不断涌现。为了跟上时代的步伐，我买了本React的书，边看边记录，照着书中的例子改写成ES6版，希望自己能变得更强。
 约束组件约束组件的模式与React其他类型组件的模式一致，表单组件的状态交由React组件控制，状态值被存储在React的state中。示例如下：
 1234567891011121314151617181920212223242526272">
-<meta property="og:updated_time" content="2016-06-01T14:23:13.876Z">
+<meta property="og:updated_time" content="2016-06-01T14:24:39.988Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React读书笔记">
 <meta name="twitter:description" content="最近前端圈的技术层出不穷，各种框架、工具不断涌现。为了跟上时代的步伐，我买了本React的书，边看边记录，照着书中的例子改写成ES6版，希望自己能变得更强。
@@ -226,14 +226,14 @@
 <p>最近前端圈的技术层出不穷，各种框架、工具不断涌现。为了跟上时代的步伐，我买了本React的书，边看边记录，照着书中的例子改写成ES6版，希望自己能变得更强。</p>
 <h2 id="约束组件"><a href="#约束组件" class="headerlink" title="约束组件"></a>约束组件</h2><p>约束组件的模式与React其他类型组件的模式一致，表单组件的状态交由React组件控制，状态值被存储在React的state中。<br>示例如下：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyForm</span> <span class="keyword">extends</span> <span class="title">React</span>.<span class="title">Component</span> </span>&#123;</span><br><span class="line">    <span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">        <span class="keyword">super</span>(props);</span><br><span class="line">        <span class="keyword">this</span>.state = &#123;</span><br><span class="line">            helloTo:<span class="string">"Hello World!"</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    handleChange(event) &#123;</span><br><span class="line">        event.preventDefault();</span><br><span class="line">        <span class="keyword">this</span>.setState(&#123;helloTo:event.target.value&#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    submitHandler(event) &#123;</span><br><span class="line">        event.preventDefault();</span><br><span class="line">        alert(<span class="keyword">this</span>.state.helloTo);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    render() &#123;</span><br><span class="line">        <span class="keyword">return</span> (</span><br><span class="line">            &lt;form&gt;</span><br><span class="line">                &lt;input type="text" value=&#123;this.state.helloTo&#125;</span><br><span class="line">                onChange=&#123;this.handleChange&#125; /&gt;</span><br><span class="line">                &lt;button type="submit"&gt;Speak&lt;/button&gt;</span><br><span class="line">            &lt;/form&gt;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><input>的值存储在父组件的state中，因此数据流有了清晰的定义。</p>
+<p>input的值存储在父组件的state中，因此数据流有了清晰的定义。</p>
 <blockquote>
 <ul>
 <li>在constructor中设置defaultValue</li>
-<li><input>的值在渲染时被设置</li>
-<li><input>的值在onChange时，change处理器被调用</li>
+<li>input的值在渲染时被设置</li>
+<li>input的值在onChange时，change处理器被调用</li>
 <li>change处理器更新state</li>
-<li>在重新渲染时更新<input>的值</li>
+<li>在重新渲染时更新input的值</li>
 </ul>
 </blockquote>
 
